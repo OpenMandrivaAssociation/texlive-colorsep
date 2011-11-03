@@ -1,3 +1,9 @@
+# revision 13293
+# category Package
+# catalog-ctan /graphics/colorsep/colorsep.pro
+# catalog-date 2009-09-15 14:15:21 +0200
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-colorsep
 Version:	20090915
 Release:	1
@@ -33,6 +39,7 @@ Support for colour separation when using dvips.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/dvips/colorsep/colorsep.pro
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -43,3 +50,5 @@ Support for colour separation when using dvips.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
