@@ -41,3 +41,18 @@ Support for colour separation when using dvips.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090915-2
++ Revision: 750373
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090915-1
++ Revision: 718098
+- texlive-colorsep
+- texlive-colorsep
+- texlive-colorsep
+- texlive-colorsep
+- texlive-colorsep
+
