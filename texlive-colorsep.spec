@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-colorsep
 Version:	20090915
-Release:	5
+Release:	6
 Summary:	Color separation
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/colorsep/colorsep.pro
