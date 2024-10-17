@@ -3,7 +3,7 @@ Version:	13293
 Release:	2
 Summary:	Color separation
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/colorsep/colorsep.pro
+URL:		https://www.ctan.org/tex-archive/graphics/colorsep/colorsep.pro
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/colorsep.r%{version}.tar.xz
 BuildArch:	noarch
