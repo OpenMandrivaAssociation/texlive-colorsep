@@ -1,37 +1,20 @@
-Name:		texlive-colorsep
-Version:	13293
-Release:	2
+%global tl_name colorsep
+%global tl_revision 13293
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	Color separation
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/graphics/colorsep/colorsep.pro
-License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/colorsep.r%{version}.tar.xz
+URL:		https://www.ctan.org/tex-archive/graphics/colorsep
+License:	pd
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/colorsep.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
 Support for colour separation when using dvips.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/dvips/colorsep/colorsep.pro
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar dvips %{buildroot}%{_texmfdistdir}
